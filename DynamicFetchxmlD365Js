@@ -1,0 +1,13 @@
+var opportunityFetchXml = (String.format([
+                "<fetch>",
+                "<entity name='opportunity'>",
+                "<attribute name='opportunityid'/>",
+                "<attribute name='name'/>",
+                "<attribute name='statecode'/>",
+                "<attribute name='actualclosedate'/>",
+                "<filter type='and'>",
+                "<condition attribute='customerid' operator='eq' value='{0}' ></condition>",
+                "<condition attribute='statecode' operator='eq' value='0' ></condition>",
+                "</filter>",
+                "</entity>",
+                "</fetch>"].join(""), contactId));
